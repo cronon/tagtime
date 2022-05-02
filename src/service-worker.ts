@@ -78,3 +78,20 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+self.addEventListener('periodicsync', (event: any) => {
+  console.log('periodic sync event')
+  if (event.tag === 'content-sync') {
+    // See the "Think before you sync" section for
+    // checks you could perform before syncing.
+    event.waitUntil(showNotification());
+  }
+  // Other logic for different tags as needed.
+});
+
+async function showNotification(){
+  return self.registration.showNotification('NOTIFICATION FROM A SERVICE WORKER', {
+    body: 'What are you doing',
+    vibrate: [100, 100, 500],
+    requireInteraction: true
+  })
+}

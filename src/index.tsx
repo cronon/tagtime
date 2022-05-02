@@ -12,10 +12,29 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
-serviceWorkerRegistration.register();
+serviceWorkerRegistration.register({
+  async onSuccess(registration: ServiceWorkerRegistration) {
+    Notification.requestPermission(permission => {
+      if (permission === 'granted'){
+    
+      }
+      else console.error("Notifications Permission was not granted.")
+    })
+
+    
+    const status = await navigator.permissions.query({
+      name: 'periodic-background-sync' as any,
+    });
+    if (status.state === 'granted') {
+      const c = (registration as any).periodicSync.register('check-for-notification', {
+        minInterval: 60*1000
+      });
+      console.log('settted up periodinc sync')
+    } else {
+      console.log('No perms to do backgroynd sync')
+    }
+  }
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
