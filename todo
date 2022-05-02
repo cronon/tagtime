@@ -1,0 +1,31 @@
+
+https://github.com/tagtime/TagTime
+
+Pages
+push notification has buttons with most common activity
+push notification opens you the page where you can click on a tag
+it is select tag page
+
+Edit page is where you can edit the list of tags
+
+Data page shows how much time you spent doing what
+
+Notification itself
+
+Settings page - at least silent time should be taken into account
+
+
+1. Create page layout with menu button
+2. Create a data storage -> localstorage with migrations
+3. Create a class that can run checks if it is time to make a notification
+* Check how notification looks like
+* create pages
+* PWA boilerplate
+
+The plan
+* The PWA boilerpalte to install and receive notifications on the phone while the app is in background
+    * 
+    * deploy on github
+* Find out how when to make and how to process notifications
+* edit page
+* notification page
