@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tagtime/static/css/main.073c9b0a.css",
+    "main.js": "/tagtime/static/js/main.899d9404.js",
+    "service-worker.js": "/tagtime/service-worker.js",
+    "static/media/logo.svg": "/tagtime/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/tagtime/index.html",
+    "main.073c9b0a.css.map": "/tagtime/static/css/main.073c9b0a.css.map",
+    "main.899d9404.js.map": "/tagtime/static/js/main.899d9404.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.899d9404.js"
+  ]
+}
